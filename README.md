@@ -1,137 +1,122 @@
-# Django Ecommerce Project
+# ?? Django Ecommerce Platform
 
-A fully-featured ecommerce platform built using **Django** and **Django Rest Framework (DRF)**, designed to handle product management, user authentication, and shopping cart functionalities.
+![Ecommerce Dashboard](https://miro.medium.com/max/1400/1*ZdpddX3zJhL6h4v4Z4S1jw.png)
 
-![django_ecommerce_logo](https://img.icons8.com/ios/452/shopping-cart.png)
-
----
-
-## Features
-
-- **JWT-based user authentication:** Login, registration, and token-based authentication.
-- **Product Management:** Add, update, delete, and view products.
-- **Categories Management:** Organize products into categories.
-- **Shopping Cart:** Add and remove products, view cart, and checkout.
-- **Best-selling products:** Display top-selling products.
-- **User Statistics:** View total users and paid carts.
-- **Testimonials:** Add and manage user testimonials.
-  
----
-
-## Technologies Used
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/DRF-ff1709?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
-</p>
+A modern, full-featured ecommerce solution built with Django and DRF, featuring JWT authentication, product management, and shopping cart functionality.
 
 ---
 
-## Installation & Setup
+## ? Key Features
 
-Follow the steps below to set up the project locally:
+<div align="center">
 
-### 1. Clone the repository
+| Feature Category | Icon | Description |
+|------------------|------|-------------|
+| **Authentication** | ?? | JWT-based secure user authentication |
+| **Product Management** | ?? | Full CRUD operations for products |
+| **Category System** | ??? | Hierarchical product categorization |
+| **Shopping Cart** | ?? | Persistent cart functionality |
+| **Analytics** | ?? | Sales and user statistics |
+| **Reviews** | ? | Product testimonials system |
+
+</div>
+
+---
+
+## ?? Technology Stack
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="60" title="Django"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60" title="Python"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" title="PostgreSQL"/>
+  <img src="https://jwt.io/img/pic_logo.svg" width="60" title="JWT"/>
+  <img src="https://www.django-rest-framework.org/img/logo.png" width="120" title="DRF"/>
+</div>
+
+---
+
+## ?? Getting Started
+
+### Prerequisites
+- Python 3.8+
+- pip package manager
+- Virtual environment
+
+### Installation
+
 ```bash
-git clone git@github.com:hadisehshad/django_ecommerce.git
-cd django_ecommerce
+# Clone the repository
+git clone https://github.com/yourusername/django-ecommerce.git
+cd django-ecommerce
 
-
-2. Create a virtual environment
-It’s recommended to use a virtual environment to isolate dependencies.
-
-# Create virtual environment
+# Set up virtual environment
 python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+.\venv\Scripts\activate  # Windows
 
-# Activate the virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-3. Install project dependencies
-pip install --upgrade pip
+# Install dependencies
 pip install -r requirements.txt
 
-4. Apply database migrations
-python manage.py makemigrations
+# Configure environment variables
+cp .env.example .env
+
+# Run migrations
 python manage.py migrate
 
-5. Create a superuser (for accessing the Django admin panel)
+# Create admin user
 python manage.py createsuperuser
 
-6. Run the development server
+# Start development server
 python manage.py runserver
 
-Visit the app at http://127.0.0.1:8000
+Access the application at: http://localhost:8000
+Admin panel: http://localhost:8000/admin
 
-Visit the admin panel at http://127.0.0.1:8000/admin
+?? API Documentation
+Authentication Endpoints
+Method	Endpoint	Description
+POST	/api/auth/register/	User registration
+POST	/api/auth/login/	User login
+POST	/api/auth/token/refresh/	Refresh JWT token
+Product Endpoints
+Method	Endpoint	Description
+GET	/api/products/	List all products
+POST	/api/products/	Create new product
+GET	/api/products/{id}/	Product details
+Cart Endpoints
+Method	Endpoint	Description
+GET	/api/cart/	View cart contents
+POST	/api/cart/add/	Add item to cart
+DELETE	/api/cart/remove/	Remove item from cart
 
----
+?? Interactive API docs available at:
 
-API Endpoints
-Authentication
-POST /account/api/token: Obtain JWT access and refresh tokens.
+Swagger UI: /swagger/
 
-POST /account/api/token/refresh: Refresh the JWT access token.
+ReDoc: /redoc/
 
-POST /account/api/v1/register_or_login/: Register a new user or login.
-
-POST /account/api/v1/send_code/: Send a verification code.
-
-Shop
-GET /shop/api/v1/manage_categories: Show, add, and delete categories.
-
-POST /shop/api/v1/manage_products: Create, update, and delete products.
-
-GET /shop/api/v1/product_list: Display a list of all products.
-
-GET /shop/api/v1/product_detail/<product_id>: Get product details by ID.
-
-POST /shop/api/v1/add_to_cart: Add a product to the cart.
-
-GET /shop/api/v1/show_cart: View the contents of the user's cart.
-
-POST /shop/api/v1/checkout: Checkout and process the payment.
-
-Home
-GET /home/api/v2/testimonials: Get and create testimonials.
-
-GET /home/api/v2/testimonials/<id>: Retrieve or update a testimonial by ID.
-
-DELETE /home/api/v2/testimonials/delete/<id>: Delete a testimonial.
----
-
-Swagger UI & Redoc
-API Documentation is available at:
-
-Swagger UI
-
-Redoc
----
-
-## ðŸ“œ License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-Mockup Demo Sketch
+?? Project Structure
+django-ecommerce/
+??? accounts/            # Authentication app
+??? products/            # Product management
+??? cart/                # Shopping cart logic
+??? static/              # Static files
+??? templates/           # HTML templates
+??? manage.py            # Django CLI
+??? requirements.txt     # Dependencies
 
 
-+--------------------------------------------------------------+
-|                         Django Ecommerce                     |
-|           A Modular Ecommerce Platform with JWT Auth         |
-+-------------------+        DRF        +----------------------+
-|                   |------------------>|                      |
-|   Account App     |                   |      Shop App        |
-|-------------------|                   |----------------------|
-|   Register        |                   |   Manage Products    |
-|   Login           |                   |   Add to Cart        |
-|   Logout          |                   |   Show Cart          |
-|   Send Reset Code |                   |   Checkout           |
-+-------------------+        JWT Token  +----------------------+
-                        Access + Refresh Tokens
+?? Screenshots
+<div align="center"> <img src="https://via.placeholder.com/400x225/3d5a80/ffffff?text=Product+Page" width="45%"> <img src="https://via.placeholder.com/400x225/3d5a80/ffffff?text=Shopping+Cart" width="45%"> </div>
+?? License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+?? Contact
+For questions or support, please contact:
+
+?? Email: your.email@example.com
+?? Website: https://yourwebsite.com
+?? LinkedIn: Your Name
+
+<div align="center"> <img src="https://img.icons8.com/fluency/96/000000/shopping-cart.png" alt="Cart Icon"> <img src="https://img.icons8.com/color/96/000000/django.png" alt="Django Icon"> </div> ```
+
