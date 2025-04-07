@@ -5,23 +5,6 @@ A modern, full-featured ecommerce solution built with Django and DRF, featuring 
 
 ---
 
-## ✨ Key Features
-
-<div align="center">
-
-| 🧩 Feature | 🔍 Description |
-|-----------|----------------|
-| 🔐 **Authentication** | Secure JWT-based user login & registration |
-| 📦 **Product Management** | Full CRUD for products |
-| 🏷️ **Category System** | Organized product categorization |
-| 🛒 **Shopping Cart** | Persistent and dynamic cart logic |
-| 📈 **Analytics** | Real-time sales/user metrics |
-| ⭐ **Reviews** | Customer feedback and ratings |
-
-</div>
-
----
-
 
 ## 🚀 Features
 
@@ -32,9 +15,7 @@ A modern, full-featured ecommerce solution built with Django and DRF, featuring 
 - 📈 Real-time analytics (sales, orders, users)  
 - ⭐ Product reviews and ratings  
 - 🛠️ Django Admin for managing products, orders, and users  
-- 🔗 DRF-powered RESTful API
-
----
+- 🌐 DRF-powered RESTful API  
 
 
 ---
@@ -84,6 +65,8 @@ cp .env.example .env
 
 ### 5. 🛠️ Apply database migrations
 ```bash
+python manage.py makemigrations
+
 python manage.py migrate
 ```
 
