@@ -6,7 +6,7 @@ A modern, full-featured ecommerce solution built with Django and DRF, featuring 
 ---
 
 
-## 🚀 Features
+## ✨ Features
 
 - 🔐 JWT-based user authentication (Login & Register)  
 - 🛒 Shopping cart with session-based persistence  
