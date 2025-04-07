@@ -129,15 +129,11 @@ django-ecommerce/
 ---
 
 ## 📜 License
-MIT License - see `LICENSE.md`
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
-## ✉️ Contact
-
-- 📧 Email: your.email@example.com  
-- 🌐 Website: https://yourwebsite.com  
-- 💼 LinkedIn: Your Name
 
 <div align="center">
   <img src="https://img.icons8.com/fluency/96/000000/shopping-cart.png" alt="Cart Icon">
