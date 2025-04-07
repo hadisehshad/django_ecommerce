@@ -1,6 +1,5 @@
 # 🛍️ Django Ecommerce Platform
 
-![Ecommerce Dashboard](https://miro.medium.com/max/1400/1*ZdpddX3zJhL6h4v4Z4S1jw.png)
 
 A modern, full-featured ecommerce solution built with Django and DRF, featuring JWT authentication, product management, and shopping cart functionality.
 
@@ -32,99 +31,66 @@ A modern, full-featured ecommerce solution built with Django and DRF, featuring 
   <img src="https://www.django-rest-framework.org/img/logo.png" width="120" title="DRF"/>
 </div>
 
+
 ---
 
-## 🚀 Getting Started
+## 🧪 Installation & Setup
 
-### Prerequisites
-- Python 3.8+
-- pip
-- Virtualenv
+Follow the steps below to run the project locally:
 
-### Installation
-
+### 1. 📥 Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/yourusername/django-ecommerce.git
 cd django-ecommerce
+```
 
-# Set up virtual environment
+### 2. 🌀 Create a virtual environment
+```bash
 python -m venv venv
-source venv/bin/activate  # Linux/MacOS
-.
-env\Scripts ctivate   # Windows
 
-# Install dependencies
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+```
+
+### 3. 📦 Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-# Setup environment variables
+### 4. 🔧 Environment setup
+```bash
 cp .env.example .env
+```
 
-# Run database migrations
+### 5. 🛠️ Apply database migrations
+```bash
 python manage.py migrate
+```
 
-# Create superuser
+### 6. 👤 Create a superuser
+```bash
 python manage.py createsuperuser
+```
 
-# Start the server
+### 7. 🚀 Run the server
+```bash
 python manage.py runserver
 ```
 
-Access: [http://localhost:8000](http://localhost:8000)  
-Admin: [http://localhost:8000/admin](http://localhost:8000/admin)
+> Access App: [http://localhost:8000](http://localhost:8000)  
+> Admin Panel: [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ---
 
-## 🔐 API Endpoints Overview
+## 🔐 API Overview
 
-### 🔑 Authentication
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/register/` | Register new user |
-| POST | `/api/auth/login/` | Login user |
-| POST | `/api/auth/token/refresh/` | Refresh JWT token |
+Full interactive API docs available at:
 
-### 📦 Product
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/products/` | List products |
-| POST | `/api/products/` | Create new product |
-| GET | `/api/products/{id}/` | Product details |
-
-### 🛒 Cart
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/cart/` | View cart |
-| POST | `/api/cart/add/` | Add to cart |
-| DELETE | `/api/cart/remove/` | Remove from cart |
-
-📚 API Docs:  
-- Swagger: `/swagger/`  
-- ReDoc: `/redoc/`
-
----
-
-## 🗂 Project Structure
-
-```
-django-ecommerce/
-├── accounts/            # User authentication
-├── products/            # Product management
-├── cart/                # Shopping cart
-├── static/              # Static files
-├── templates/           # HTML templates
-├── manage.py            # Project CLI
-└── requirements.txt     # Python dependencies
-```
-
----
-
-## 📸 Screenshots
-
-<div align="center">
-  <img src="https://via.placeholder.com/400x225/3d5a80/ffffff?text=Product+Page" width="45%">
-  <img src="https://via.placeholder.com/400x225/3d5a80/ffffff?text=Shopping+Cart" width="45%">
-</div>
+- Swagger UI → `/swagger/`
+- ReDoc → `/redoc/`
 
 ---
 
