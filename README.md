@@ -22,6 +22,23 @@ A modern, full-featured ecommerce solution built with Django and DRF, featuring 
 
 ---
 
+
+## 🚀 Features
+
+- 🔐 JWT-based user authentication (Login & Register)  
+- 🛒 Shopping cart with session-based persistence  
+- 📦 Full CRUD for product listings  
+- 🏷️ Product categories and tagging  
+- 📈 Real-time analytics (sales, orders, users)  
+- ⭐ Product reviews and ratings  
+- 🛠️ Django Admin for managing products, orders, and users  
+- 🔗 DRF-powered RESTful API
+
+---
+
+
+---
+
 ## 🛠 Technology Stack
 
 <div align="center">
